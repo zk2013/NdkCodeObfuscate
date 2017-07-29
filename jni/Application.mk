@@ -1,1 +1,2 @@
 APP_ABI := armeabi
+NDK_TOOLCHAIN_VERSION := clang3.6
