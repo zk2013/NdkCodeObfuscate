@@ -58,6 +58,20 @@ Java_com_example_hellojni_HelloJni_stringFromJNI( JNIEnv* env,
 #else
    #define ABI "unknown"
 #endif
-
+	check_code(1000);
     return (*env)->NewStringUTF(env, "Hello from JNI !  Compiled with ABI " ABI ".");
+}
+
+int check_code(int a) {
+	char key[200] = {0};
+	
+	for(int i = 0 ; i < 100; i++ ) {
+		if (i %2 ==0) {
+			snprintf(key, 100, "key=%d", i);
+		}
+		else {
+			snprintf(key, 100, "value=%d", i);
+		}
+	}
+return 0;
 }
